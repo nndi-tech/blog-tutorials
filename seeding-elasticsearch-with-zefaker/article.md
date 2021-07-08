@@ -47,7 +47,7 @@ zefaker requires Java to be installed to run. I'm assuming you have the `java` c
 With that we can run the following to generate 5 million rows of random data exported into a JSON Lines format (basically a plain text file where each line is a JSON Object).
 
 ```sh
-$ java -jar zefaker-all.jar -f data.groovy -format jsonl -output elasticdata.jsonl -rows 5000000
+$ java -jar zefaker-all.jar -f data.groovy -jsonl -output elasticdata.jsonl -rows 5000000
 ```
 
 ## Indexing the data in Elasticsearch
@@ -64,3 +64,4 @@ After esbulk completes (silently) you can check that the operation was successfu
 $ curl -G http://localhost:9200/people-2021.07.07/_search
 ```
 
+Date: 2021-07-08
